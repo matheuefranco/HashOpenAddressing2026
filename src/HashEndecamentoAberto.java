@@ -1,4 +1,6 @@
-public class HashAberto<T> {
+// Hash com Endereçamento Aberto
+
+public class HashEndecamentoAberto<T> {
     private static final int VAZIO = 0;
     private static final int REMOVIDO = 1;
     private static final int OCUPADO = 2;
@@ -27,7 +29,7 @@ public class HashAberto<T> {
         }
     }
 //------------------Construtor------------------------------------ 
-    public HashAberto(int tamanho) {
+    public HashEndecamentoAberto(int tamanho) {
         this.tamanho = tamanho;
         tabela = new HashEntry[tamanho];
         for (int i = 0; i < tamanho; i++) {
@@ -35,7 +37,7 @@ public class HashAberto<T> {
         }
     }
 
-    public HashAberto() {
+    public HashEndecamentoAberto() {
         this.tamanho = 10; // Tamanho default
         tabela = new HashEntry[tamanho];
         for (int i = 0; i < tamanho; i++) {

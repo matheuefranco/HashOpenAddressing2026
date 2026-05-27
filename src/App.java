@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class App {
 
-    private static void carregarCSV(String arquivo, HashAberto<String> hashTable) {
+    private static void carregarCSV(String arquivo, HashEndecamentoAberto<String> hashTable) {
         File file = new File(arquivo);
         try (Scanner fscan = new Scanner(file)) {
             while (fscan.hasNextLine()) {
@@ -39,7 +39,7 @@ public class App {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        HashAberto<String> hashTable = new HashAberto<>();
+        HashEndecamentoAberto<String> hashTable = new HashEndecamentoAberto<>();
         System.out.print("Arquivo CSV para carregar (enter para pular): ");
         String arquivo = scanner.nextLine().trim();
         if (!arquivo.isEmpty()) {
